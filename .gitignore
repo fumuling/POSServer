@@ -1,0 +1,7 @@
+.ipynb_checkpoints/
+__MACOSX/
+db.sqlite3
+*.ipynb
+cn_pos_tag.h5
+*/__pycache__/
+.idea/

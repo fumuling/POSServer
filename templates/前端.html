@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<!-- 载入静态文件 -->
+{% load static %}
+<!-- 网站主语言 -->
+<html lang="zh-cn">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- 引入css样式 -->
+        <base href="/">
+        <link rel="stylesheet" href="../static/css/前端.css" />
+        <title>词形标注</title>
+
+    </head>
+    <body>
+    <!-- 页眉 -->
+    <header>
+        <div class="header-right">
+          <span>武汉大学信息管理学院</span>
+          <span>信息管理与信息系统</span>
+          <span>傅聪睿</span>
+            <span>2018301040103</span>
+        </div>
+    </header>
+    <!-- 中间 -->
+    <div class="logo">
+          <a href=""><img src="../static/picture/pos.jfif" alt=""></a>
+    </div>
+    <div class="search">
+        <form action="{% url 'app:app' %}" method="post">
+            {% csrf_token %}
+            <input type="text" name="text" />
+            <button type="submit">词性标注GO!</button>
+        </form>
+    </div>
+    <!-- 榜单区 -->
+    <div class="hot-head">
+          <a href="" class="hot-title">词形标注结果展示：</a>
+    </div>
+    <div class="hot-list">
+      <div class="hot-left">
+{#        <ul>#}
+{#          <li>#}
+{#            <a href="">90后姑娘熬夜战疫胖了十几斤</a>#}
+{#            </a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a href="#">大碗宽面的姐姐们评论张萌</a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a href="#">教育部给本科教学打分</a>#}
+{#          </li>#}
+{#        </ul>#}
+          {% for i in word_list %}
+              <ul>
+                  <li>
+                  {% if forloop.counter == 1 %}
+                        <p>{{ i }}</p>
+                  {% endif %}
+                  </li>
+                   <li>
+                  {% if forloop.counter == 2 %}
+                        <p>{{ i }}</p>
+                      <p> </p>
+                  {% endif %}
+                  </li><li>
+                  {% if forloop.counter == 3 %}
+                        <p>{{ i }}</p>
+                      <p> </p>
+                  {% endif %}
+                  </li>
+              </ul>
+
+          {% endfor %}
+      </div>
+      <div class="hot-right">
+{#        <ul>#}
+{#          <li>#}
+{#            <a href="">全国人大代表申纪兰逝世</a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a href="#">北京新增14例确诊病例</a>#}
+{#          </li>#}
+{#          <li>#}
+{#            <a href="#">快乐大本营选常驻新人</a>#}
+{#          </li>#}
+{#        </ul>#}
+          {% for i in POS_list %}
+              <ul>
+                  <li>
+                  {% if forloop.counter == 1 %}
+                        <p>{{ i }}</p>
+                  {% endif %}
+                  </li>
+                   <li>
+                  {% if forloop.counter == 2 %}
+                        <p>{{ i }}</p>
+                      <p> </p>
+                  {% endif %}
+                  </li><li>
+                  {% if forloop.counter == 3 %}
+                        <p>{{ i }}</p>
+                      <p> </p>
+                  {% endif %}
+                  </li>
+              </ul>
+
+          {% endfor %}
+      </div>
+    </div>
+    <!-- 页脚 -->
+
+  </body>
+</html>

@@ -1,0 +1,190 @@
+* {
+  /* 初始化样式 */
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/* 去a标签除下划线 */
+a {
+  text-decoration: none;
+  font-size: 13px;
+  color: #222;
+}
+li {
+  list-style: none;
+}
+/* 设置为弹性容器，并垂直排列 */
+html,
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+/* 头部区域 */
+header {
+  display: flex;
+  min-width: 1265px;
+  height: 60px;
+  align-items: center;
+  /* 水平方向靠两边排列 */
+  justify-content: space-between;
+}
+/* 左边部分 */
+
+
+/* 右边部分 */
+header > .header-right {
+  display: flex;
+  /* 居中对齐 */
+  align-items: center;
+  height: 60px;
+  /* 左外边距20px */
+  margin: auto;
+}
+span {
+  padding: 3px 14px;
+  font-size: 13px;
+
+}
+header > .header-right > span:hover {
+  color: #4e71f2;
+}
+/* logo部分 */
+.logo {
+  display: flex;
+  align-content: center;
+  margin: auto;
+}
+.logo > a > img {
+  height: 129px;
+  width: 270px;
+}
+/* 搜索区 */
+.search {
+  display: flex;
+  justify-content: center;
+  line-height: 44px;
+  position: relative;
+  margin-top: 60px;
+  margin-bottom: 40px;
+}
+.search > form {
+  height: 48px;
+}
+.search > form > input {
+  width: 546px;
+  height: 44px;
+  border: 2px solid #a7aab5;
+  /*border-right: none;*/
+  border-radius: 10px;
+}
+
+.search > form > button {
+  height: 44px;
+  width: 108px;
+  text-align: center;
+  background-color: #4e6ef2;
+  color: #eef2fe;
+  font-size: 17px;
+  border-radius: 15px;
+  margin-right: 0;
+  margin-left: 0;
+}
+/* 鼠标悬停样式 */
+.search > a:hover {
+  background-color: #4662d9;
+}
+.search > .zx:hover {
+  color: #4e6ef2;
+}
+.search > input:hover {
+  border: 2px solid #626675;
+  border-right: none;
+}
+/* 热搜区 */
+.hot-head {
+  width: 654px;
+  display: flex;
+  /* 主轴为水平靠两端边对齐排列 */
+  justify-content: space-between;
+  margin: 25px auto;
+}
+.hot-head > a:first-of-type {
+  font-size: 14px;
+}
+.hot-head > a > span:last-of-type {
+  font-size: 13px;
+  color: #9195a3;
+
+}
+.hot-head > a > .zh {
+  font-size: 16px;
+  color: #9195a3;
+  margin-right: -28px;
+}
+/* 列表区 */
+.hot-list {
+  display: flex;
+  width: 654px;
+  height: 100%;
+  margin: 5px auto;
+}
+/* 右边 */
+.hot-list > .hot-left {
+  display: flex;
+  flex-grow: 1;
+  margin-right: 50px;
+}
+.hot-list > .hot-left > ul > li {
+  padding-top: 10px;
+}
+.hot-list > .hot-left > ul > li > a {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+/* 左边 */
+.hot-list > .hot-right {
+  display: flex;
+  flex-grow: 1;
+}
+.hot-list > .hot-right > ul > li {
+  padding-top: 10px;
+}
+.hot-list > .hot-right > ul > li > a {
+  font-size: 14px;
+  line-height: 20px;
+  text-align: center;
+}
+/* 鼠标悬停样式 */
+.hot-list > .hot-left > ul > li > a:hover {
+  color: #4e6ef2;
+}
+.hot-list > .hot-right > ul > li > a:hover {
+  color: #4e6ef2;
+}
+/* 图标样式 */
+.hot-list > .hot-left > ul > li > .number1 {
+  color: #fcd533;
+}
+.hot-list > .hot-left > ul > li > .re1 {
+  color: #faab06;
+}
+.hot-list > .hot-left > ul > li > .number2 {
+  color: #b9d5f3;
+}
+.hot-list > .hot-left > ul > li > .xin1 {
+  color: #ff4589;
+}
+.hot-list > .hot-left > ul > li > .number3 {
+  color: #ead1bb;
+}
+.hot-list > .hot-right > ul > li > .number4 {
+  color: #9195a3;
+}
+
+span {
+  font-size: 12px;
+  color: #9e95ad;
+  padding: 13px;
+}
